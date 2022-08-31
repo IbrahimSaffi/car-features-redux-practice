@@ -14,8 +14,7 @@ export default function InputComponent() {
      <p> Amount: ${carDetails.price}</p>
      {state.addedFeatures.length>0?<h1>Added features</h1>:null}
     {state.addedFeatures.map((ele,i)=>{
-      console.log(ele)
-      return <div className='row' >
+      return <div key={i} className='row' >
        <button onClick={()=>dispatch(removeFeature(i))} >X</button>
        <p>{ele.name}</p>
       </div>

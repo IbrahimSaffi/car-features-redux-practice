@@ -11,7 +11,7 @@ export default function OutputComponent() {
     <div className='in-comp' >
       { state.availableFeatures.length>0?<h1>Additional Features</h1>:null}
       {state.availableFeatures.map((ele,i)=>{
-        return <div className='row' >
+        return <div key={i} className='row' >
           <button onClick={()=>dispatch(addFeature(i))} >Add</button>
           <p>{ele.name} (+{ele.price})</p>
         </div>
