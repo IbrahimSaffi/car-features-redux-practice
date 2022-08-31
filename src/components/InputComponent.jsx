@@ -11,8 +11,8 @@ export default function InputComponent() {
     <div className='out-comp' >
      <img src={carDetails.image} alt="" srcset="" />
      <p> {carDetails.name}</p>
-     <p> {carDetails.price}</p>
-     <h1>Added features</h1>
+     <p> Amount: ${carDetails.price}</p>
+     {state.addedFeatures.length>0?<h1>Added features</h1>:null}
     {state.addedFeatures.map((ele,i)=>{
       console.log(ele)
       return <div className='row' >

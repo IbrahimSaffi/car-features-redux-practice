@@ -9,7 +9,7 @@ export default function OutputComponent() {
   let state = useSelector(state=>state.carSlice)
   return (
     <div className='in-comp' >
-      <h1>Additional Features</h1>
+      { state.availableFeatures.length>0?<h1>Additional Features</h1>:null}
       {state.availableFeatures.map((ele,i)=>{
         return <div className='row' >
           <button onClick={()=>dispatch(addFeature(i))} >Add</button>

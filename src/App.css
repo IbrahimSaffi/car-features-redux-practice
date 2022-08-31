@@ -12,18 +12,23 @@ width: 100vw;
 justify-content: space-around;
 align-items: center;
 }
+.outer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
 .out-comp, .in-comp{
     background-color: white;
     width: 48%;
-    min-height: 70%;
     display: flex;
-    flex-direction: column;
     padding: 20px;
+    flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     gap: 20px;
     border-radius: 10px;
 }
-
 button{
     background-color: #F76AB4;
     border: none;
@@ -40,9 +45,6 @@ button:hover{
  display: flex;
  gap: 10px;
  align-items: center;
-}
-.out-comp{
-    min-height: 70%;
 }
 img{
     width: 100%;
